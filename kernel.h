@@ -12,7 +12,6 @@ typedef short          int16_t;
 typedef char           int8_t;
 
 /* Kernel functions */
-void kernel_main(unsigned int multiboot_magic, void *multiboot_info);
 void clear_screen(void);
 void print(const char *str);
 void print_at(const char *str, int x, int y, unsigned char color);
