@@ -26,7 +26,9 @@ OBJS = $(ASM_OBJ) $(C_OBJ)
 
 # Compiler flags
 ASM_FLAGS = -f elf32
-CC_FLAGS = -m32 -c -ffreestanding -O2 -Wall -Wextra -fno-exceptions -nostdlib -nostartfiles -nodefaultlibs
+CC_FLAGS = -m32 -c -ffreestanding -O2 -Wall -Wextra -Werror \
+           -fno-builtin -fno-exceptions -fno-stack-protector \
+           -nostdlib -nostartfiles -nodefaultlibs
 LD_FLAGS = -m elf_i386 -T $(LINKER_SCRIPT) -nostdlib
 
 # Default target
