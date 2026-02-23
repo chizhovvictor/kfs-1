@@ -62,7 +62,7 @@ void print(const char *str) {
 }
 
 /* Kernel main function */
-void main() {
+void kernel_main() {
     /* Clear the screen */
     clear_screen();
     
