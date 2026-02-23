@@ -62,7 +62,7 @@ void print(const char *str) {
 }
 
 /* Kernel main function */
-void kernel_main(unsigned int multiboot_magic, void *multiboot_info) {
+void kernel_main() {
     /* Clear the screen */
     clear_screen();
     
