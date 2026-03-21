@@ -21,6 +21,16 @@ static inline unsigned char vga_color(unsigned char fg, unsigned char bg) {
     return fg | bg << 4;
 }
 
+/* Basic string length helper for freestanding kernel */
+uint32_t strlen(const char *str) {
+    uint32_t len = 0;
+
+    while (str[len] != '\0') {
+        len++;
+    }
+    return len;
+}
+
 /* Clear the screen */
 void clear_screen(void) {
     unsigned short *vga_buffer = (unsigned short *) VGA_MEMORY;
